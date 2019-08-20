@@ -2,6 +2,9 @@ package transfer.com.dao
 
 import transfer.com.model.Account
 
+/**
+ * Interface representing all actions possible to be done on an account
+ */
 interface AccountDao {
 
     /**
