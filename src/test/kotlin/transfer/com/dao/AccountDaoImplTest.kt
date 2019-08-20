@@ -62,4 +62,25 @@ class AccountDaoImplTest {
         }
     }
 
+    @Test
+    fun createTest () {
+        runBlocking {
+            val accountToCreate = Account (email ="test10@mail.com", balance = 10000.0)
+            assertThat(accountDao.findByEmail(accountToCreate.getEmail())).isNull()
+            assertThat(accountToCreate).isEqualTo(accountDao.create(accountToCreate.getEmail(), accountToCreate.getBalance()))
+            assertThat(accountDao.findByEmail(accountToCreate.getEmail())).isNotNull()
+            assertThat(accountToCreate).isEqualTo(accountDao.findByEmail(accountToCreate.getEmail()))
+        }
+    }
+
+    @Test
+    fun deleteTest (){
+        runBlocking {
+            val accountToDelete = Account (email ="test03@mail.com", balance = 10000.0)
+            assertThat(accountDao.findByEmail(accountToDelete.getEmail())).isNotNull()
+            assertThat(accountToDelete).isEqualTo(accountDao.delete(accountToDelete.getEmail()))
+            assertThat(accountDao.findByEmail(accountToDelete.getEmail())).isNull()
+        }
+    }
+
 }

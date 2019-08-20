@@ -3,8 +3,7 @@ package transfer.com.dao
 import transfer.com.model.Account
 
 object AccountDaoImpl : AccountDao {
-
-    /**
+     /**
      * In-Memory datastore
      */
     private var accounts = hashMapOf(
@@ -40,6 +39,14 @@ object AccountDaoImpl : AccountDao {
     }
 
     override fun deposit(email: String, amount: Double): Double {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun create(email: String, amount: Double): Account {
+        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun delete(email: String): Account {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 }

@@ -4,8 +4,46 @@ import transfer.com.model.Account
 
 interface AccountDao {
 
+    /**
+     * Method uses to find an account
+     * Parameter : email (String)
+     * Result : if successful an Account else null
+     */
     fun findByEmail(email: String): Account?
+
+
+    /**
+     * Method uses to add amount on an account balance
+     * Parameters : email (String), amount (Double)
+     * Result : the new account balance
+     */
     fun deposit(email: String, amount: Double): Double
+
+    /**
+     * Method uses to substract amount on an account balance
+     * Parameters : email (String), amount (Double)
+     * Result : the new account balance
+     */
     fun withdraw (email : String, amount: Double): Double
+
+    /**
+     * Method uses to obtain balance from an account
+     * Parameter : email (String)
+     * Result : account balance
+     */
     fun balance (email : String): Double
+
+    /**
+     * Method uses to create an account
+     * Parameter : email (String), amount (Double)
+     * Result : if successful an Account else null
+     */
+    fun create (email : String, amount : Double) : Account
+
+    /**
+     * Method uses to delete an account
+     * Parameter : email (String)
+     * Result : if successful an Account else null
+     */
+    fun delete (email : String) : Account
 }
