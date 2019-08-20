@@ -3,11 +3,13 @@ package transfer.com.router
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder
 import org.slf4j.LoggerFactory
+import transfer.com.handler.AccountHandler
+import transfer.com.handler.AccountHandlerImpl
 
 class Router {
     //Logger for the class
     private val LOGGER = LoggerFactory.getLogger(Router.javaClass)
-    private val accountRouter: AccountRouter = AccountRouterImpl
+    private val accountHandler: AccountHandler = AccountHandlerImpl
 
     companion object {
         private lateinit var app: Javalin
@@ -36,15 +38,15 @@ class Router {
 
         app.routes {
             ApiBuilder.path("accounts") {
-                ApiBuilder.get(accountRouter.getAll())
+                ApiBuilder.get(accountHandler.getAll())
                 ApiBuilder.path(":email") {
-                    ApiBuilder.get(accountRouter.consult())
-                    ApiBuilder.delete(accountRouter.delete())
+                    ApiBuilder.get(accountHandler.consult())
+                    ApiBuilder.delete(accountHandler.delete())
                     ApiBuilder.path(":amount"){
-                        ApiBuilder.put(accountRouter.create())
-                        ApiBuilder.post(accountRouter.deposit())
+                        ApiBuilder.put(accountHandler.create())
+                        ApiBuilder.post(accountHandler.deposit())
                         ApiBuilder.path(":otherEmail"){
-                            ApiBuilder.post(accountRouter.transfer())
+                            ApiBuilder.post(accountHandler.transfer())
                         }
                     }
                 }

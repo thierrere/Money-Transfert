@@ -18,7 +18,7 @@ interface AccountService {
     val mSG_TRANSACTION_INSUFICIENT_FUND: String
         get() = "Transfer failed insufficient balance on Sender Account"
     val mSG_TRANSACTION_NEGATIVE_AMOUNT: String
-        get() = "Transfer failed - please use a positive amount"
+        get() = "Transfer failed - please use a positive amount bigger than zero"
     val mSG_TRANSACTION_ERROR : String
         get() = "Transfer failed - Unexpected Error"
     val MSG_DEPOSIT_ERROR : String
@@ -36,7 +36,7 @@ interface AccountService {
     val mSG_CREATE_ACCOUNT_ERROR : String
         get() = "Create Account failed - Unexpected Error"
     val mSG_CREATE_ACCOUNT_NEGATIVE_AMOUNT : String
-        get() = "Create Account failed - please use a positive amount"
+        get() = "Create Account failed - please use a positive amount bigger than zero"
     val mSG_CREATE_ACCOUNT_ALREADY_EXIST : String
         get() = "Create Account failed - Account already exist please use another email address"
     val mSG_DELETE_ACCOUNT_ERROR : String

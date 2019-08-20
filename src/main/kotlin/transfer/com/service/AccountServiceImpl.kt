@@ -33,7 +33,7 @@ class AccountServiceImpl : AccountService {
     }*/
 
     override fun getAccount(email : String): Account? {
-        return getAccountDao().findByEmail(email)!!
+        return getAccountDao().findByEmail(email)
     }
 
     override fun getAllAccounts(): HashMap<String, Account> {

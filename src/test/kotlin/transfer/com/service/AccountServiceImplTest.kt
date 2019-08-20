@@ -206,9 +206,7 @@ class AccountServiceImplTest {
     @Test
     fun moneyTransactionTest() {
         val accountSending = accountService.getAccountDao().getAccounts()["test01@mail.com"]
-        //val accountSending = AccountDaoImpl.getAccounts()["test01@mail.com"]
         val accountReceiving = accountService.getAccountDao().getAccounts()["test04@mail.com"]
-        //val accountReceiving = AccountDaoImpl.getAccounts()["test04@mail.com"]
         val amountToTransfer = 500.0
         val balanceAccountSending = accountSending!!.getBalance()
         val balanceAccountReceiving = accountReceiving!!.getBalance()
@@ -231,7 +229,6 @@ class AccountServiceImplTest {
                 balance = balanceAccountSending - amountToTransfer
             )
         ).isEqualTo(accountService.getAccountDao().getAccounts()["test01@mail.com"])
-        //assertThat(Account(email = accountSending.getEmail(), balance = balanceAccountSending-amountToTranfert)).isEqualTo(AccountDaoImpl.getAccounts()["test01@mail.com"])
         assertThat(
             Account(
                 email = accountReceiving.getEmail(),
