@@ -42,4 +42,4 @@ $ curl -X POST localhost:7000/accounts/account01@mail.com/100.0
  * [Javalin](https://javalin.io/) : Simple REST APIs for Java and Kotlin
  * [KotlinTest](https://github.com/kotlintest/kotlintest) : Flexible and comprehensive testing tool for Kotlin
  * [RestAssured](http://rest-assured.io/) : Testing and validating REST services  with simplicity
- * [Hamcrest] (http://hamcrest.org/JavaHamcrest/) : Matchers that can be combined to create flexible expressions of intent
+ * [Hamcrest](http://hamcrest.org/JavaHamcrest/) : Matchers that can be combined to create flexible expressions of intent
