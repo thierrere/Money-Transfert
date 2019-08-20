@@ -1,11 +1,63 @@
 package transfer.com.router
 
 import io.javalin.http.Handler
-import org.litote.kmongo.json
 import transfer.com.service.AccountService
 import transfer.com.service.AccountServiceImpl
 
 object AccountRouterImpl : AccountRouter {
+
+    override fun create(): Handler {
+        return Handler{
+                ctx ->
+            ctx.status(501)
+        }
+    }
+
+    override fun transfer(): Handler {
+        return Handler{
+                ctx ->
+            ctx.status(501)
+        }
+    }
+
+    override fun deposit(): Handler {
+        return Handler{
+                ctx ->
+            ctx.status(501)
+        }
+    }
+
+    override fun consult(): Handler {
+        return Handler{
+                ctx ->
+            /**
+             * Find an account using email
+             */
+            println("Find an account using email")
+            accountService.getAccount(ctx.pathParam("email"))?.let { ctx.json(it) }
+                ?: ctx.status(404)
+        }
+    }
+
+    override fun delete(): Handler {
+        return Handler{
+                ctx ->
+            ctx.status(501)
+        }
+    }
+
+    override fun getAll(): Handler {
+        return Handler{
+            ctx ->
+            /**
+             * Get all accounts
+             */
+            println("Get all accounts")
+            accountService.getAllAccounts().let { ctx.json(it) }
+            ctx.status(200)
+        }
+    }
+
     private val accountService : AccountService = AccountServiceImpl()
     override fun routing() : Handler {
         return Handler{

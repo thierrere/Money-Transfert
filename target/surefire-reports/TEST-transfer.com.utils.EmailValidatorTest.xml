@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="15" failures="0" name="transfer.com.service.AccountServiceImplTest" time="0.017" errors="0" skipped="0">
+<testsuite tests="1" failures="0" name="transfer.com.utils.EmailValidatorTest" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
@@ -66,19 +66,5 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="moneyTransactionWithInsufficientBalance" time="0.001"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="checkAvailabilityOfAmountTest" time="0"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="moneyTransactionUnknownSendingEmail" time="0.002"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="moneyTransactionTest" time="0.001"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="createAccountTestWithExistingAccount" time="0.001"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="makeDepositTest" time="0.009"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="createAccountTestWithNegativeAmount" time="0"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="getAccountTest" time="0"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="moneyTransactionUnknownReceiverEmail" time="0.001"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="getAllAccountsTest" time="0"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="makeDepositTestNegativeAmount" time="0"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="moneyTransactionWithNegativeAmount" time="0.001"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="deleteAccountTest" time="0"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="makeDepositTestUnknownAccount" time="0"/>
-  <testcase classname="transfer.com.service.AccountServiceImplTest" name="createAccountTest" time="0.001"/>
+  <testcase classname="transfer.com.utils.EmailValidatorTest" name="isEmailValid" time="0"/>
 </testsuite>

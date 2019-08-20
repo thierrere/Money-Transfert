@@ -36,17 +36,15 @@ class Router {
 
         app.routes {
             ApiBuilder.path("accounts") {
-                ApiBuilder.get(accountRouter.routing())
+                ApiBuilder.get(accountRouter.getAll())
                 ApiBuilder.path(":email") {
-                    ApiBuilder.get(accountRouter.routing())
-                    ApiBuilder.put(accountRouter.routing())
-                    ApiBuilder.delete(accountRouter.routing())
+                    ApiBuilder.get(accountRouter.consult())
+                    ApiBuilder.delete(accountRouter.delete())
                     ApiBuilder.path(":amount"){
-                        ApiBuilder.put(accountRouter.routing())
-                        ApiBuilder.get(accountRouter.routing())
-                        ApiBuilder.post(accountRouter.routing())
+                        ApiBuilder.put(accountRouter.create())
+                        ApiBuilder.post(accountRouter.deposit())
                         ApiBuilder.path(":otherEmail"){
-                            ApiBuilder.post(accountRouter.routing())
+                            ApiBuilder.post(accountRouter.transfer())
                         }
                     }
                 }
