@@ -63,10 +63,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="transfer.com.dao.AccountDaoImplTest" name="findByEmailTest" time="0.122"/>
+  <testcase classname="transfer.com.dao.AccountDaoImplTest" name="findByEmailTest" time="0.12"/>
   <testcase classname="transfer.com.dao.AccountDaoImplTest" name="balanceTest" time="0"/>
-  <testcase classname="transfer.com.dao.AccountDaoImplTest" name="depositTest" time="0.001"/>
-  <testcase classname="transfer.com.dao.AccountDaoImplTest" name="createTest" time="0"/>
+  <testcase classname="transfer.com.dao.AccountDaoImplTest" name="depositTest" time="0.002"/>
+  <testcase classname="transfer.com.dao.AccountDaoImplTest" name="createTest" time="0.001"/>
   <testcase classname="transfer.com.dao.AccountDaoImplTest" name="withdrawTest" time="0.001"/>
   <testcase classname="transfer.com.dao.AccountDaoImplTest" name="deleteTest" time="0.001"/>
 </testsuite>

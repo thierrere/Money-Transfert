@@ -1,8 +1,14 @@
 package transfer.com.dao
 
 import transfer.com.model.Account
+import org.slf4j.LoggerFactory
+
+
 
 object AccountDaoImpl : AccountDao {
+
+    //Logger for the class
+    private val LOGGER = LoggerFactory.getLogger(AccountDaoImpl.javaClass)
      /**
      * In-Memory datastore
      */
@@ -17,6 +23,7 @@ object AccountDaoImpl : AccountDao {
      * Method to return all the accounts
      */
     fun getAccounts() : HashMap<String, Account>{
+        LOGGER.info("List of all Accounts")
         return accounts
     }
 
@@ -27,55 +34,65 @@ object AccountDaoImpl : AccountDao {
     }
 
     override fun findByEmail(email: String): Account? {
+        LOGGER.info("findByEmail call : email = $email")
         return accounts[email]
     }
 
     override fun balance(email: String): Double {
+        LOGGER.info("Checking balance for : email = $email")
         val account = findByEmail(email)
         if(account !=null){
+            LOGGER.info("Checking balance for email = $email : email found in datastore (balance return)")
             return account.getBalance()
         }
+        LOGGER.info("Checking balance for email = $email : email not found")
         return -1.0
     }
 
     override fun deposit(email: String, amount: Double): Double {
+        LOGGER.info("Start - deposit on account email = $email for the amount = $amount")
         val account = findByEmail(email)
         if(account !=null && amount>0.0){
             account.setBalance(amount+account.getBalance())
-            //println("deposit 1 - Accounts = $accounts")
             accounts[email] = account
-            //println("deposit 2 - Accounts = $accounts")
-            //println("Deposit successful :  $account")
+            LOGGER.info("End - deposit successful on account email = $email")
             return account.getBalance()
         }
+        LOGGER.info("End - deposit failed on account email = $email")
         return -1.0
     }
 
     override fun withdraw(email: String, amount: Double): Double {
+        LOGGER.info("Start - withdraw on account email = $email for the amount = $amount")
         val account = findByEmail(email)
         if(account !=null&& amount>0.0){
             account.setBalance(account.getBalance()-amount)
-            //println("withdraw 1 - Accounts = $accounts")
             accounts[email] = account
-            //println("withdraw 2 - Accounts = $accounts")
-            //println("Withdraw successful :  $account")
+            LOGGER.info("End - withdraw successful on account email = $email")
             return account.getBalance()
         }
+        LOGGER.info("End - withdraw failed on account email = $email")
         return -1.0
     }
 
     override fun create(email: String, amount: Double): Account? {
+        LOGGER.info("Start - create an account email = $email for the amount = $amount")
         if(findByEmail(email)==null && amount >0.0){
             accounts[email] = Account (email = email, balance = amount)
+            LOGGER.info("End - create successful an account email = $email")
             return accounts[email]
        }
+        LOGGER.info("End - create failed an account email = $email")
         return null
     }
 
     override fun delete(email: String): Account? {
+        LOGGER.info("Start - delete an account email = $email")
         if(findByEmail(email) != null){
+            LOGGER.info("End - delete successful an account email = $email")
             return accounts.remove(email)
         }
+        LOGGER.info("End - delete failed an account email = $email")
         return null
     }
 }
