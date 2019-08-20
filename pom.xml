@@ -3,12 +3,12 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>transfert.com</groupId>
+    <groupId>transfer.com</groupId>
     <artifactId>Money-Transfer</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>transfert.com Money-Transfer</name>
+    <name>transfer.com Money-Transfer</name>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

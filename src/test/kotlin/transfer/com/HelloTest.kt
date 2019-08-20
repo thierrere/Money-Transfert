@@ -1,4 +1,4 @@
-package transfert.com
+package transfer.com
 
 import org.junit.Test
 import kotlin.test.assertEquals
