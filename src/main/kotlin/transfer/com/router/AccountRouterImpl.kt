@@ -1,6 +1,7 @@
 package transfer.com.router
 
 import io.javalin.http.Handler
+import org.litote.kmongo.json
 import transfer.com.service.AccountService
 import transfer.com.service.AccountServiceImpl
 
@@ -10,9 +11,6 @@ object AccountRouterImpl : AccountRouter {
         return Handler{
             ctx ->
             val pathParamMapSize = ctx.pathParamMap().size
-            println("Context Map : ${ctx.pathParamMap()}")
-            println("Context Map : $pathParamMapSize")
-            println("Context Map : ${ctx.method()}")
             if(pathParamMapSize==0 && ctx.method() == "GET"){
                 /**
                  * Get all accounts
@@ -41,16 +39,14 @@ object AccountRouterImpl : AccountRouter {
                  * Create new Account
                  */
                 //val amount = ctx.pathParam("amount")
-                println("Create new Account")
-                accountService.createAccount(ctx.pathParam("email"),ctx.pathParam("amount").toDouble()).let{ctx.json{it}}
+                accountService.createAccount(ctx.pathParam("email"),ctx.pathParam("amount").toDouble()).let{ ctx.json(it)}
                 ctx.status(200)
             }
             if(pathParamMapSize == 2 && ctx.method() == "POST"){
                 /**
                  * Make a deposit
                  */
-                println("Make a deposit")
-                accountService.makeDeposit(ctx.pathParam("email"),ctx.pathParam("amount").toDouble()).let{ctx.json{it}}
+                accountService.makeDeposit(ctx.pathParam("email"),ctx.pathParam("amount").toDouble()).let{ ctx.json(it) }
                 ctx.status(200)
             }
             if(pathParamMapSize == 3 && ctx.method() == "POST"){
@@ -58,7 +54,7 @@ object AccountRouterImpl : AccountRouter {
                  * Transfer fund between account
                  */
                 println("Transfer fund between account")
-                accountService.moneyTransaction(ctx.pathParam("email"), ctx.pathParam("otherEmail") ,ctx.pathParam("amount").toDouble()).let{ctx.json{it}}
+                accountService.moneyTransaction(ctx.pathParam("email"), ctx.pathParam("otherEmail") ,ctx.pathParam("amount").toDouble()).let {ctx.json(it)}
                 ctx.status(200)
             }
             //ctx.status(404)
