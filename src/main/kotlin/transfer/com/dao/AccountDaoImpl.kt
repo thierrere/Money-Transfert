@@ -27,19 +27,41 @@ object AccountDaoImpl : AccountDao {
     }
 
     override fun findByEmail(email: String): Account? {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
-    }
-
-    override fun withdraw(email: String, amount: Double): Double {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        return accounts[email]
     }
 
     override fun balance(email: String): Double {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val account = findByEmail(email)
+        if(account !=null){
+            return account.getBalance()
+        }
+        return -1.0
     }
 
     override fun deposit(email: String, amount: Double): Double {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val account = findByEmail(email)
+        if(account !=null && amount>0.0){
+            account.setBalance(amount+account.getBalance())
+            //println("deposit 1 - Accounts = $accounts")
+            accounts[email] = account
+            //println("deposit 2 - Accounts = $accounts")
+            //println("Deposit successful :  $account")
+            return account.getBalance()
+        }
+        return -1.0
+    }
+
+    override fun withdraw(email: String, amount: Double): Double {
+        val account = findByEmail(email)
+        if(account !=null&& amount>0.0){
+            account.setBalance(account.getBalance()-amount)
+            //println("withdraw 1 - Accounts = $accounts")
+            accounts[email] = account
+            //println("withdraw 2 - Accounts = $accounts")
+            //println("Withdraw successful :  $account")
+            return account.getBalance()
+        }
+        return -1.0
     }
 
     override fun create(email: String, amount: Double): Account {
