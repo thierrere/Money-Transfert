@@ -15,7 +15,7 @@ object AccountDaoImpl : AccountDao {
     private var accounts = hashMapOf(
         "account01@mail.com" to Account (email = "account01@mail.com", balance  = 1000.0),
         "account02@mail.com" to Account (email = "account02@mail.com", balance  = 2000.0),
-        "account03@amail.com" to Account (email = "account03@amail.com", balance  = 3000.0),
+        "account03@mail.com" to Account (email = "account03@mail.com", balance  = 3000.0),
         "account04@mail.com" to Account (email = "account04@mail.com", balance  = 4000.0)
     )
 
