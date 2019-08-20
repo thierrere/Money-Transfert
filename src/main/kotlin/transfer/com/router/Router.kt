@@ -3,8 +3,6 @@ package transfer.com.router
 import io.javalin.Javalin
 import io.javalin.apibuilder.ApiBuilder
 import org.slf4j.LoggerFactory
-import transfer.com.service.AccountService
-import transfer.com.service.AccountServiceImpl
 
 class Router {
     //Logger for the class

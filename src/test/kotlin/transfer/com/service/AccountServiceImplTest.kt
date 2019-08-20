@@ -33,12 +33,13 @@ class AccountServiceImplTest {
     @Test
     fun getAccountTest() {
         val account = accountService.getAccountDao().getAccounts()["test01@mail.com"]
+        assertThat(account).isEqualTo(accountService.getAccount(account!!.getEmail()))
 
     }
 
     @Test
     fun getAllAccountsTest() {
-        assertThat(accountService.getAllAccounts()).isEqualTo(accountService.getAccountDao().getAccounts())
+        assertThat(accountService.getAccountDao().getAccounts()).isEqualTo(accountService.getAllAccounts())
     }
 
     @Test
@@ -56,29 +57,99 @@ class AccountServiceImplTest {
         assertThat(accountService.checkAvailabilityOfAmount(account!!.getEmail(), 1000.00)).isTrue()
     }
 
+    /**
+     * Test deposit case 01 : Unknown account
+     */
     @Test
-    fun makeDepositTest() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    fun makeDepositTestUnknownAccount() {
+        val accountUnknown = Account("account10@mail.com", 20000.0)
+        val result = hashMapOf(
+            false to accountService.MSG_DEPOSIT_UNKNOWN_ACCOUNT
+        )
+        assertThat(result).isEqualTo(accountService.makeDeposit(accountUnknown!!.getEmail(), 200.0))
     }
 
+    /**
+     * Test deposit case 02 : Negative amount
+     */
+    @Test
+    fun makeDepositTestNegativeAmount() {
+        val account = accountService.getAccountDao().getAccounts()["test02@mail.com"]
+        val negativeAmount = -1000.0
+        val result = hashMapOf(
+            false to accountService.MSG_DEPOSIT_NEGATIVE_AMOUNT
+        )
+        assertThat(result).isEqualTo(accountService.makeDeposit(account!!.getEmail(), negativeAmount))
+    }
+
+    /**
+     * Test deposit with correct parameters
+     */
+    @Test
+    fun makeDepositTest() {
+        val account = accountService.getAccountDao().getAccounts()["test02@mail.com"]
+        val balance = account!!.getBalance()
+        val amountToDeposit = 500.0
+        val result = hashMapOf(
+            true to "Deposit Successful to account ${account.getEmail()} of amount : $amountToDeposit"
+        )
+        assertThat(result).isEqualTo(accountService.makeDeposit(account.getEmail(), amountToDeposit))
+        assertThat(Account(account.getEmail(),balance+amountToDeposit)).isEqualTo(accountService.getAccountDao().getAccounts()["test02@mail.com"])
+    }
+
+    /**
+     * Test createAccount case 01 : Negative amount
+     */
+    @Test
+    fun createAccountTestWithNegativeAmount() {
+        val accountToCreate = Account ("test20@mail.com", -2000.0)
+        val result = hashMapOf(
+            false to accountService.MSG_CREATE_ACCOUNT_NEGATIVE_AMOUNT
+        )
+        //assertThat(accountService.getAccount(accountToCreate.getEmail())).isNull()
+        assertThat(result).isEqualTo(accountService.createAccount(accountToCreate.getEmail(), accountToCreate.getBalance()))
+    }
+
+    /**
+     * Test createAccount case 02 : Already existing account
+     */
+    @Test
+    fun createAccountTestWithExistingAccount() {
+        val accountToCreate = Account ("test02@mail.com", 2000.0)
+        val result = hashMapOf(
+            false to accountService.MSG_CREATE_ACCOUNT_ALREADY_EXIST
+        )
+        assertThat(accountService.getAccount(accountToCreate.getEmail())).isNotNull()
+        assertThat(result).isEqualTo(accountService.createAccount(accountToCreate.getEmail(), accountToCreate.getBalance()))
+    }
+
+    /**
+     * Test createAccount with correct parameters
+     */
     @Test
     fun createAccountTest() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+        val accountToCreate = Account ("test20@mail.com", 20000.0)
+        val result = hashMapOf(
+            true to "Create Account Successful : $accountToCreate"
+        )
+        //assertThat(accountService.getAccount(accountToCreate.getEmail())).isNull()
+        assertThat(result).isEqualTo(accountService.createAccount(accountToCreate.getEmail(), accountToCreate.getBalance()))
+        assertThat(accountToCreate).isEqualTo(accountService.getAccountDao().getAccounts()[accountToCreate.getEmail()])
     }
 
     @Test
     fun deleteAccountTest() {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+
     }
 
     /**
      * Test Transfer case 01 : sending money with an unknown email
      */
     @Test
-    fun moneyTransactionRobustTest01() {
+    fun moneyTransactionUnknownSendingEmail() {
         val accountSending = Account("account01@mail.com", 20000.0)
         val result = hashMapOf(
-            false to "Account Sending unknown"
+            false to accountService.MSG_TRANSACTION_UNKNOWN_SENDER
         )
         assertThat(
             accountService.moneyTransaction(
@@ -87,67 +158,68 @@ class AccountServiceImplTest {
                 transferAmount =  500.0
             )
         ).isEqualTo(result)
+        assertThat(result).isEqualTo(accountService.moneyTransaction(accountSending.getEmail(),accountService.getAccountDao().getAccounts()["test02@mail.com"]!!.getEmail(),transferAmount =  500.0))
     }
 
     /**
      * Test Transfer case 02 : sending money to an unknown email
      */
     @Test
-    fun moneyTransactionRobustTest02() {
+    fun moneyTransactionUnknownReceiverEmail() {
         val accountReceiving = Account("account02@mail.com", 30000.0)
         val result = hashMapOf(
-            false to "Account Receiving unknown"
+            false to accountService.MSG_TRANSACTION_UNKNOWN_RECEIVER
         )
         assertThat(
-            accountService.moneyTransaction(
-                accountService.getAccountDao().getAccounts()["test02@mail.com"]!!.getEmail(),
-                accountReceiving.getEmail(),
-                transferAmount = 500.0
-            )
-        ).isEqualTo(result)
+            result
+        ).isEqualTo(accountService.moneyTransaction(
+            accountService.getAccountDao().getAccounts()["test02@mail.com"]!!.getEmail(),
+            accountReceiving.getEmail(),
+            transferAmount = 500.0
+        ))
     }
 
     /**
      * Test Transfer case 03 : sending money over the balance of the actual account
      */
     @Test
-    fun moneyTransactionRobustTest03() {
+    fun moneyTransactionWithInsufficientBalance() {
         val accountSending = accountService.getAccountDao().getAccounts()["test02@mail.com"]
         //val accountSending = AccountDaoImpl.getAccounts()["test02@mail.com"]
         val accountReceiving = accountService.getAccountDao().getAccounts()["test04@mail.com"]
         //val accountReceiving = AccountDaoImpl.getAccounts()["test04@mail.com"]
         val amountToTransfer = accountSending!!.getBalance() + 1000.0
         val result = hashMapOf(
-            false to "Transfer failed insufficient balance on Sender Account"
+            false to accountService.MSG_TRANSACTION_INSUFICIENT_FUND
         )
         assertThat(
-            accountService.moneyTransaction(
-                accountSending.getEmail(),
-                accountReceiving!!.getEmail(),
-                transferAmount= amountToTransfer
-            )
-        ).isEqualTo(result)
+            result
+        ).isEqualTo(accountService.moneyTransaction(
+            accountSending.getEmail(),
+            accountReceiving!!.getEmail(),
+            transferAmount= amountToTransfer
+        ))
     }
 
     /**
      * Test Transfer case 04 : sending money with a negative amount
      */
     @Test
-    fun moneyTransactionRobustTest04() {
+    fun moneyTransactionWithNegativeAmount() {
         val accountSending = accountService.getAccountDao().getAccounts()["test02@mail.com"]
         //val accountSending = AccountDaoImpl.getAccounts()["test02@mail.com"]
         val accountReceiving = accountService.getAccountDao().getAccounts()["test04@mail.com"]
         //val accountReceiving = AccountDaoImpl.getAccounts()["test04@mail.com"]
         val result = hashMapOf(
-            false to "Transfer failed - please use a positive amount"
+            false to accountService.MSG_TRANSACTION_NEGATIVE_AMOUNT
         )
         assertThat(
-            accountService.moneyTransaction(
-                accountSending!!.getEmail(),
-                accountReceiving!!.getEmail(),
-                transferAmount = -1000.0
-            )
-        ).isEqualTo(result)
+            result
+        ).isEqualTo(accountService.moneyTransaction(
+            accountSending!!.getEmail(),
+            accountReceiving!!.getEmail(),
+            transferAmount = -1000.0
+        ))
     }
 
     /**
@@ -163,16 +235,16 @@ class AccountServiceImplTest {
         val balanceAccountSending = accountSending!!.getBalance()
         val balanceAccountReceiving = accountReceiving!!.getBalance()
         val result = hashMapOf(
-            false to "Transfer Successful from ${accountSending.getEmail()} to ${accountReceiving.getEmail()} of amount : $amountToTransfer"
+            true to "Transfer Successful from account ${accountSending.getEmail()} to account ${accountReceiving.getEmail()} of amount : $amountToTransfer"
         )
         //compare the result balance on each account after the transfers, on each object and in the account Map
         assertThat(
-            accountService.moneyTransaction(
-                accountSending.getEmail(),
-                accountReceiving.getEmail(),
-                transferAmount = amountToTransfer
-            )
-        ).isEqualTo(result)
+            result
+        ).isEqualTo(accountService.moneyTransaction(
+            accountSending.getEmail(),
+            accountReceiving.getEmail(),
+            transferAmount = amountToTransfer
+        ))
         //Verifying the balance of each account
         //Verifying the balance of each account in the provided database (HashMap)
         assertThat(

@@ -59,13 +59,6 @@
             <artifactId>javalin</artifactId>
             <version>3.4.1</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.github.kittinunf.fuel/fuel -->
-        <dependency>
-            <groupId>com.github.kittinunf.fuel</groupId>
-            <artifactId>fuel</artifactId>
-            <version>2.2.0</version>
-        </dependency>
-
         <dependency>
             <groupId>com.jayway.restassured</groupId>
             <artifactId>rest-assured</artifactId>
@@ -110,12 +103,4 @@
             </plugin>
         </plugins>
     </build>
-    <!--Added because of dependencies issues with fuel -->
-    <repositories>
-        <repository>
-            <id>jcenter</id>
-            <url>https://jcenter.bintray.com/</url>
-        </repository>
-    </repositories>
-
 </project>
