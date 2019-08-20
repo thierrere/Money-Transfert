@@ -7,12 +7,12 @@ import transfer.com.service.AccountServiceImpl
 object AccountHandlerImpl : AccountHandler {
 
     private val accountService : AccountService = AccountServiceImpl()
+    /**
+     * Create new Account
+     */
     override fun create(): Handler {
         return Handler{
                 ctx ->
-            /**
-             * Create new Account
-             */
             var amount = 0.0
             try {
                 amount = ctx.pathParam("amount").toDouble()
@@ -26,12 +26,12 @@ object AccountHandlerImpl : AccountHandler {
         }
     }
 
+    /**
+     * Transfer fund between account
+     */
     override fun transfer(): Handler {
         return Handler{
                 ctx ->
-            /**
-             * Transfer fund between account
-             */
             var amount = 0.0
             try {
                 amount = ctx.pathParam("amount").toDouble()
@@ -45,12 +45,12 @@ object AccountHandlerImpl : AccountHandler {
         }
     }
 
+    /**
+     * Make a deposit
+     */
     override fun deposit(): Handler {
         return Handler{
                 ctx ->
-            /**
-            * Make a deposit
-            */
             var amount = 0.0
             try {
                 amount = ctx.pathParam("amount").toDouble()
@@ -63,12 +63,12 @@ object AccountHandlerImpl : AccountHandler {
         }
     }
 
+    /**
+     * Find an account using email
+     */
     override fun consult(): Handler {
         return Handler{
                 ctx ->
-            /**
-             * Find an account using email
-             */
             println("Find an account using email")
             accountService.getAccount(ctx.pathParam("email"))?.let { ctx.json(it) }
                 ?: ctx.status(404)
@@ -82,12 +82,12 @@ object AccountHandlerImpl : AccountHandler {
         }
     }
 
+    /**
+     * Get all accounts
+     */
     override fun getAll(): Handler {
         return Handler{
             ctx ->
-            /**
-             * Get all accounts
-             */
             println("Get all accounts")
             accountService.getAllAccounts().let { ctx.json(it) }
             ctx.status(200)
