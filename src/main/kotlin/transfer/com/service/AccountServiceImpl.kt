@@ -1,12 +1,17 @@
 package transfer.com.service
 
 import io.javalin.http.Handler
+import org.slf4j.LoggerFactory
 import transfer.com.dao.AccountDao
 import transfer.com.dao.AccountDaoImpl
+import transfer.com.model.Account
 
 class AccountServiceImpl : AccountService {
 
-    /**
+    //Logger for the class
+    //private val LOGGER = LoggerFactory.getLogger(AccountServiceImpl.javaClass)
+
+    /*/**
      * Static reference to the DAO (containing datastore in-memory)
      */
     companion object {
@@ -27,28 +32,37 @@ class AccountServiceImpl : AccountService {
         if (accountDao != null) {
             accountDao = accountDaoToSet
         }
-    }
-    override fun getAccount(): Handler {
+    }*/
+
+    override fun getAccount(email : String): Account? {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun getAllAccounts(): Handler {
+    override fun getAllAccounts(): HashMap<String, Account> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun makedeposit(): Handler {
+    override fun makeDeposit(email : String , depositAmount : Double): HashMap<Boolean, String> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun createAccount(): Handler {
+    override fun createAccount(email : String , initialBalance :  Double): HashMap<Boolean, String> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun deleteAcount(): Handler {
+    override fun deleteAccount(email : String): HashMap<Boolean, String> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun moneyTransaction(): Handler {
+    override fun moneyTransaction(emailSender :  String , emailReceiver : String , transferAmount :  Double): HashMap<Boolean, String> {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    }
+
+    override fun checkAvailabilityOfAmount(email: String, amount: Double): Boolean {
+        if (getAccountDao().findByEmail(email)!!.getBalance() >= amount) {
+            //if (AccountDaoImpl.findByEmail(email)!!.getBalance() >= amount) {
+            return true
+        }
+        return false
     }
 }
