@@ -38,12 +38,12 @@ interface AccountDao {
      * Parameter : email (String), amount (Double)
      * Result : if successful an Account else null
      */
-    fun create (email : String, amount : Double) : Account
+    fun create (email : String, amount : Double) : Account?
 
     /**
      * Method uses to delete an account
      * Parameter : email (String)
      * Result : if successful an Account else null
      */
-    fun delete (email : String) : Account
+    fun delete (email : String) : Account?
 }

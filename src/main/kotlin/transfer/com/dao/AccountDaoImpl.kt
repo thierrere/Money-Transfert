@@ -64,11 +64,18 @@ object AccountDaoImpl : AccountDao {
         return -1.0
     }
 
-    override fun create(email: String, amount: Double): Account {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun create(email: String, amount: Double): Account? {
+        if(findByEmail(email)==null && amount >0.0){
+            accounts[email] = Account (email = email, balance = amount)
+            return accounts[email]
+       }
+        return null
     }
 
-    override fun delete(email: String): Account {
-        TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
+    override fun delete(email: String): Account? {
+        if(findByEmail(email) != null){
+            return accounts.remove(email)
+        }
+        return null
     }
 }

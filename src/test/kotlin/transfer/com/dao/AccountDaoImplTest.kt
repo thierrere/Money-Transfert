@@ -76,7 +76,7 @@ class AccountDaoImplTest {
     @Test
     fun deleteTest (){
         runBlocking {
-            val accountToDelete = Account (email ="test03@mail.com", balance = 10000.0)
+            val accountToDelete = Account (email ="test03@mail.com", balance = 3000.0)
             assertThat(accountDao.findByEmail(accountToDelete.getEmail())).isNotNull()
             assertThat(accountToDelete).isEqualTo(accountDao.delete(accountToDelete.getEmail()))
             assertThat(accountDao.findByEmail(accountToDelete.getEmail())).isNull()
