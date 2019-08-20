@@ -35,6 +35,10 @@ Make a deposit to an account
 ```shell
 $ curl -X POST localhost:7000/accounts/account01@mail.com/100.0
 ```
+Transfert from an account to another account
+```shell
+$ curl -X POST localhost:7000/accounts/account01@mail.com/100.0/account02@mail.com
+```
 
 #### Stuff used to make this:
 
