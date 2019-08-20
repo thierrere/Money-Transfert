@@ -47,3 +47,4 @@ $ curl -X POST localhost:7000/accounts/account01@mail.com/100.0/account02@mail.c
  * [KotlinTest](https://github.com/kotlintest/kotlintest) : Flexible and comprehensive testing tool for Kotlin
  * [RestAssured](http://rest-assured.io/) : Testing and validating REST services  with simplicity
  * [Hamcrest](http://hamcrest.org/JavaHamcrest/) : Matchers that can be combined to create flexible expressions of intent
+ * [Jersey](https://jersey.github.io/) :  Use for test in the main function
