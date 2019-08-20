@@ -40,10 +40,10 @@ class Router {
                 ApiBuilder.path(":email") {
                     ApiBuilder.get(accountRouter.routing())
                     ApiBuilder.delete(accountRouter.routing())
-                    ApiBuilder.path("amount"){
+                    ApiBuilder.path(":amount"){
                         ApiBuilder.put(accountRouter.routing())
                         ApiBuilder.post(accountRouter.routing())
-                        ApiBuilder.path("email"){
+                        ApiBuilder.path(":otherEmail"){
                             ApiBuilder.post(accountRouter.routing())
                         }
                     }
