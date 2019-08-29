@@ -5,6 +5,7 @@ import transfer.com.dao.AccountDao
 import transfer.com.dao.AccountDaoImpl
 import transfer.com.model.Account
 import transfer.com.utils.ServiceResponse
+import java.math.BigDecimal
 
 /**
  * Interface representing actions available for business purposes
@@ -84,14 +85,14 @@ interface AccountService {
      * Parameter : take directly the http context
      * Return true if the transaction is successful else return false, with a message
      */
-    fun makeDeposit(email : String , depositAmount : Double) : ServiceResponse
+    fun makeDeposit(email : String, depositAmount : BigDecimal) : ServiceResponse
 
     /**
     * Method uses to create an accounts
     * Parameter : take directly the http context
     * Return true if the transaction is successful else return false, with a message
     */
-    fun createAccount(email : String , initialBalance :  Double) : ServiceResponse
+    fun createAccount(email : String , initialBalance :  BigDecimal) : ServiceResponse
 
     /**
      * Method uses to delete an accounts
@@ -105,14 +106,14 @@ interface AccountService {
      * Parameters : emails of the sender and the receiver, the amount to send
      * Return true if the transaction is successful else return false, with a message
      */
-    fun moneyTransaction(emailSender :  String , emailReceiver : String , transferAmount :  Double) : ServiceResponse
+    fun moneyTransaction(emailSender :  String , emailReceiver : String , transferAmount :  BigDecimal) : ServiceResponse
 
     /**
      * Function to Verify the availability of amount in the current Account
      * Parameters : emails (String) and the amount (Double)
      * return true if the current account balance is Bigger or equals to the amount else return false
      */
-    fun checkAvailabilityOfAmount(email: String, amount: Double): Boolean
+    fun checkAvailabilityOfAmount(email: String, amount: BigDecimal): Boolean
 
 
 }

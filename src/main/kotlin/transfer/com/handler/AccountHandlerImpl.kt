@@ -3,6 +3,7 @@ package transfer.com.handler
 import io.javalin.http.Handler
 import transfer.com.service.AccountService
 import transfer.com.service.AccountServiceImpl
+import java.math.BigDecimal
 
 object AccountHandlerImpl : AccountHandler {
 
@@ -21,7 +22,7 @@ object AccountHandlerImpl : AccountHandler {
                 ctx.result("Please enter a correct amount to create an Account")
             }
             //val amount = ctx.pathParam("amount")
-            accountService.createAccount(ctx.pathParam("email"),ctx.pathParam("amount").toDouble()).let{ ctx.json(it)}
+            accountService.createAccount(ctx.pathParam("email"),ctx.pathParam("amount").toBigDecimal()).let{ ctx.json(it)}
             ctx.status(200)
         }
     }
@@ -32,9 +33,9 @@ object AccountHandlerImpl : AccountHandler {
     override fun transfer(): Handler {
         return Handler{
                 ctx ->
-            var amount = 0.0
+            var amount = BigDecimal(0)
             try {
-                amount = ctx.pathParam("amount").toDouble()
+                amount = ctx.pathParam("amount").toBigDecimal()
             }catch (e : Exception){
                 ctx.status(200)
                 ctx.result("Please enter a correct amount for the transfer")
@@ -51,9 +52,9 @@ object AccountHandlerImpl : AccountHandler {
     override fun deposit(): Handler {
         return Handler{
                 ctx ->
-            var amount = 0.0
+            var amount = BigDecimal(0)
             try {
-                amount = ctx.pathParam("amount").toDouble()
+                amount = ctx.pathParam("amount").toBigDecimal()
             }catch (e : Exception){
                 ctx.status(200)
                 ctx.result("Please enter a correct amount for the deposit")

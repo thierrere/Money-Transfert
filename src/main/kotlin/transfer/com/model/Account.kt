@@ -1,20 +1,22 @@
 package transfer.com.model
 
-data class Account (private val email : String, private var balance : Double) {
+import java.math.BigDecimal
+
+data class Account (private val email : String, private var balance : BigDecimal) {
 
     fun isEmpty():Boolean {
-        return (this.balance <= 0.0)
+        return (this.balance <= BigDecimal.ZERO)
     }
 
     fun getEmail() : String{
         return this.email
     }
 
-    fun getBalance () : Double{
+    fun getBalance () : BigDecimal{
         return this.balance
     }
 
-    fun setBalance (newBalance : Double) {
+    fun setBalance (newBalance : BigDecimal) {
         this.balance=newBalance;
     }
 }

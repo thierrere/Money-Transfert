@@ -1,6 +1,7 @@
 package transfer.com.dao
 
 import transfer.com.model.Account
+import java.math.BigDecimal
 
 /**
  * Interface representing all actions possible to be done on an account
@@ -20,28 +21,28 @@ interface AccountDao {
      * Parameters : email (String), amount (Double)
      * Result : the new account balance
      */
-    fun deposit(email: String, amount: Double): Double
+    fun deposit(email: String, amount: BigDecimal): BigDecimal
 
     /**
      * Method uses to substract amount on an account balance
      * Parameters : email (String), amount (Double)
      * Result : the new account balance
      */
-    fun withdraw (email : String, amount: Double): Double
+    fun withdraw (email : String, amount: BigDecimal): BigDecimal
 
     /**
      * Method uses to obtain balance from an account
      * Parameter : email (String)
      * Result : account balance
      */
-    fun balance (email : String): Double
+    fun balance (email : String): BigDecimal
 
     /**
      * Method uses to create an account
      * Parameter : email (String), amount (Double)
      * Result : if successful an Account else null
      */
-    fun create (email : String, amount : Double) : Account?
+    fun create (email : String, amount : BigDecimal) : Account?
 
     /**
      * Method uses to delete an account

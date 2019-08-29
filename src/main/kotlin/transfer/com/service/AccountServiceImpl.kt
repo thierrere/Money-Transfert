@@ -3,34 +3,9 @@ package transfer.com.service
 import kotlinx.coroutines.runBlocking
 import transfer.com.model.Account
 import transfer.com.utils.ServiceResponse
+import java.math.BigDecimal
 
 class AccountServiceImpl : AccountService {
-
-    //Logger for the class
-    //private val LOGGER = LoggerFactory.getLogger(AccountServiceImpl.javaClass)
-
-    /*/**
-     * Static reference to the DAO (containing datastore in-memory)
-     */
-    companion object {
-        var accountDao : AccountDao = AccountDaoImpl
-    }
-
-    /**
-     * Getter for the property accountDao
-     */
-    fun getAccountDao(): AccountDaoImpl {
-        return accountDao as AccountDaoImpl
-    }
-
-    /**
-     * Setter for the property accountDao
-     */
-    fun setAccounDao(accountDaoToSet: AccountDaoImpl) {
-        if (accountDao != null) {
-            accountDao = accountDaoToSet
-        }
-    }*/
 
     override fun getAccount(email : String): Account? {
         return getAccountDao().findByEmail(email)
@@ -40,10 +15,10 @@ class AccountServiceImpl : AccountService {
         return getAccountDao().getAccounts()
     }
 
-    override fun makeDeposit(email : String , depositAmount : Double): ServiceResponse {
+    override fun makeDeposit(email : String , depositAmount : BigDecimal): ServiceResponse {
         var depositStatus = ServiceResponse(false , this.mSG_TRANSACTION_ERROR)
         //Verify the amount to
-        if (depositAmount <= 0.0){
+        if (depositAmount <= BigDecimal(0)){
             return ServiceResponse(false , this.mSG_DEPOSIT_NEGATIVE_AMOUNT)
         }
         if(getAccountDao().findByEmail(email) == null){
@@ -57,9 +32,9 @@ class AccountServiceImpl : AccountService {
         return depositStatus
     }
 
-    override fun createAccount(email : String , initialBalance :  Double): ServiceResponse {
+    override fun createAccount(email : String , initialBalance :  BigDecimal): ServiceResponse {
         var createAccountStatus = ServiceResponse(false , this.mSG_CREATE_ACCOUNT_ERROR)
-        if (initialBalance < 0.0){
+        if (initialBalance < BigDecimal(0)){
             return ServiceResponse(false , this.mSG_CREATE_ACCOUNT_NEGATIVE_AMOUNT)
         }
         if(getAccountDao().findByEmail(email) != null){
@@ -79,21 +54,21 @@ class AccountServiceImpl : AccountService {
         TODO("not implemented") //To change body of created functions use File | Settings | File Templates.
     }
 
-    override fun moneyTransaction(emailSender :  String , emailReceiver : String , transferAmount :  Double): ServiceResponse {
+    /**
+     * verify Parameters before doing transfer
+     */
+    override fun moneyTransaction(emailSender :  String , emailReceiver : String , transferAmount :  BigDecimal): ServiceResponse {
         var transactionStatus = ServiceResponse(false , this.mSG_TRANSACTION_ERROR)
         //Verify parameters
-        if (transferAmount <= 0.0){
+        if (transferAmount <= BigDecimal(0)){
             return ServiceResponse(false , this.mSG_TRANSACTION_NEGATIVE_AMOUNT)
         }
-        //Verify email of the sender
         if(getAccountDao().findByEmail(emailSender) == null){
             return ServiceResponse(false , this.mSG_TRANSACTION_UNKNOWN_SENDER)
         }
-        //Verify email of the receiver
         if (getAccountDao().findByEmail(emailReceiver) == null) {
             return ServiceResponse(false , this.mSG_TRANSACTION_UNKNOWN_RECEIVER)
         }
-        //verify the balance of the sender
         if (!checkAvailabilityOfAmount(email = emailSender, amount = transferAmount)) {
             return ServiceResponse(false , this.mSG_TRANSACTION_INSUFICIENT_FUND)
         }
@@ -107,7 +82,7 @@ class AccountServiceImpl : AccountService {
         return transactionStatus
     }
 
-    override fun checkAvailabilityOfAmount(email: String, amount: Double): Boolean {
+    override fun checkAvailabilityOfAmount(email: String, amount: BigDecimal): Boolean {
         if (getAccountDao().findByEmail(email)!!.getBalance() >= amount) {
             return true
         }
