@@ -2,52 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9dc21efa-a70b-45c2-85b7-900bfeba37f0" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/transfer/com/dao/AccountDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/transfer/com/dao/AccountDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/transfer/com/dao/AccountDaoImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/transfer/com/dao/AccountDaoImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/transfer/com/handler/AccountHandlerImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/transfer/com/handler/AccountHandlerImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/transfer/com/model/Account.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/transfer/com/model/Account.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/transfer/com/service/AccountService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/transfer/com/service/AccountService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/transfer/com/service/AccountServiceImpl.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/transfer/com/service/AccountServiceImpl.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/transfer/com/dao/AccountDaoImplTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/transfer/com/dao/AccountDaoImplTest.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/kotlin/transfer/com/handler/AccountHandlerImplTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/transfer/com/handler/AccountHandlerImplTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/kotlin/transfer/com/service/AccountServiceImplTest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/kotlin/transfer/com/service/AccountServiceImplTest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Money-Transfer-1.0-SNAPSHOT-jar-with-dependencies.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Money-Transfer-1.0-SNAPSHOT.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/dao/AccountDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/dao/AccountDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/dao/AccountDaoImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/dao/AccountDaoImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$consult$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$consult$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$create$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$create$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$delete$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$delete$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$deposit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$deposit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$getAll$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$getAll$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$transfer$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl$transfer$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/handler/AccountHandlerImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/model/Account.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/model/Account.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountService$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountService$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountService$DefaultImpls.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountService$DefaultImpls.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl$createAccount$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl$createAccount$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl$makeDeposit$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl$makeDeposit$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl$moneyTransaction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl$moneyTransaction$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/transfer/com/service/AccountServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.dao.AccountDaoImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.dao.AccountDaoImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.handler.AccountHandlerImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.handler.AccountHandlerImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.service.AccountServiceImplTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.service.AccountServiceImplTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.utils.EmailValidatorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-transfer.com.utils.EmailValidatorTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/transfer.com.dao.AccountDaoImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/transfer.com.dao.AccountDaoImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/transfer.com.handler.AccountHandlerImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/transfer.com.handler.AccountHandlerImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/transfer.com.service.AccountServiceImplTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/transfer.com.service.AccountServiceImplTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$balanceTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$balanceTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$createTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$createTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$deleteTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$deleteTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$depositTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$depositTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$findByEmailTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$findByEmailTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$withdrawTest$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest$withdrawTest$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/dao/AccountDaoImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/handler/AccountHandlerImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/handler/AccountHandlerImplTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/transfer/com/service/AccountServiceImplTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/transfer/com/service/AccountServiceImplTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -155,8 +110,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/kotlin/transfer/com/handler/AccountHandlerImplTest.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="142">
-              <caret line="79" column="113" selection-start-line="79" selection-start-column="113" selection-end-line="79" selection-end-column="113" />
+            <state relative-caret-position="125">
+              <caret line="81" column="232" selection-start-line="81" selection-start-column="232" selection-end-line="81" selection-end-column="232" />
               <folding>
                 <element signature="e#30#422#0" expanded="true" />
               </folding>
@@ -835,8 +790,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/kotlin/transfer/com/handler/AccountHandlerImplTest.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="142">
-          <caret line="79" column="113" selection-start-line="79" selection-start-column="113" selection-end-line="79" selection-end-column="113" />
+        <state relative-caret-position="125">
+          <caret line="81" column="232" selection-start-line="81" selection-start-column="232" selection-end-line="81" selection-end-column="232" />
           <folding>
             <element signature="e#30#422#0" expanded="true" />
           </folding>

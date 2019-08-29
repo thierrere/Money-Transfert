@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="4" name="transfer.com.handler.AccountHandlerImplTest" time="2.105" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="transfer.com.handler.AccountHandlerImplTest" time="2.152" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
@@ -28,26 +28,24 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 10"/>
-    <property name="classworlds.conf" value="C:\Users\t.nenkam.nenkam\Documents\DEVs\Tools\apache-maven-3.6.1\bin\..\bin\m2.conf"/>
+    <property name="classworlds.conf" value="C:\Users\t.nenkam.nenkam\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2019.1\plugins\maven\lib\maven3\bin\m2.conf"/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_201\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Java\jdk1.8.0_201\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\MySQL\MySQL Utilities 1.6\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\opscode\chefdk\bin\;C:\HashiCorp\Vagrant\bin;C:\Users\t.nenkam.nenkam\Documents\DEVs\Tools\apache-maven-3.6.1\bin;C:\Users\t.nenkam.nenkam\Documents\DEVs\Works\resources;C:\Program Files\Git\cmd;C:\Users\t.nenkam.nenkam\AppData\Local\Microsoft\WindowsApps;C:\Users\t.nenkam.nenkam\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\t.nenkam.nenkam\AppData\Local\Programs\Fiddler;C:\Users\t.nenkam.nenkam\AppData\Local\Microsoft\WindowsApps;C:\Users\t.nenkam.nenkam\AppData\Local\Programs\Git\cmd;."/>
-    <property name="maven.conf" value="C:\Users\t.nenkam.nenkam\Documents\DEVs\Tools\apache-maven-3.6.1\bin\../conf"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.class.version" value="52.0"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="os.version" value="10.0"/>
-    <property name="library.jansi.path" value="C:\Users\t.nenkam.nenkam\Documents\DEVs\Tools\apache-maven-3.6.1\bin\..\lib\jansi-native"/>
     <property name="user.home" value="C:\Users\t.nenkam.nenkam"/>
     <property name="user.timezone" value="Indian/Mauritius"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
     <property name="java.specification.version" value="1.8"/>
-    <property name="file.encoding" value="Cp1252"/>
+    <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="t.nenkam.nenkam"/>
-    <property name="java.class.path" value="C:\Users\t.nenkam.nenkam\Documents\DEVs\Tools\apache-maven-3.6.1\bin\..\boot\plexus-classworlds-2.6.0.jar"/>
+    <property name="java.class.path" value="C:\Users\t.nenkam.nenkam\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2019.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.5.2.jar;C:\Users\t.nenkam.nenkam\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2019.1\lib\idea_rt.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_201\jre"/>
-    <property name="sun.java.command" value="org.codehaus.plexus.classworlds.launcher.Launcher test"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version2019.1 clean install"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -55,398 +53,20 @@
     <property name="java.version" value="1.8.0_201"/>
     <property name="java.ext.dirs" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
     <property name="sun.boot.class.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\lib\resources.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\rt.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\sunrsasign.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jsse.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jce.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\charsets.jar;C:\Program Files\Java\jdk1.8.0_201\jre\lib\jfr.jar;C:\Program Files\Java\jdk1.8.0_201\jre\classes"/>
-    <property name="sun.stderr.encoding" value="cp437"/>
     <property name="java.vendor" value="Oracle Corporation"/>
-    <property name="maven.home" value="C:\Users\t.nenkam.nenkam\Documents\DEVs\Tools\apache-maven-3.6.1\bin\.."/>
+    <property name="maven.home" value="C:\Users\t.nenkam.nenkam\AppData\Local\JetBrains\IntelliJ IDEA Community Edition 2019.1\plugins\maven\lib\maven3"/>
     <property name="file.separator" value="\"/>
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
+    <property name="idea.version2019.1" value="true"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
-    <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="transferTest" time="1.908">
-    <failure message="1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;3500&gt;
-  Actual: 3500
-" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;3500&gt;
-  Actual: 3500
-
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCallConstructor(CallSiteArray.java:60)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:235)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
-	at com.jayway.restassured.specification.ResponseSpecification$content$1.callCurrent(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
-	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:264)
-	at transfer.com.handler.AccountHandlerImplTest.transferTest(AccountHandlerImplTest.kt:81)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-    <system-out>Get all accounts
-Transfer fund between account
-Find an account using email
-</system-out>
-    <system-err>[main] INFO io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-[main] INFO org.eclipse.jetty.util.log - Logging initialized @788ms to org.eclipse.jetty.util.log.Slf4jLog
-[main] INFO io.javalin.Javalin - Starting Javalin ...
-[main] INFO io.javalin.Javalin - Listening on http://localhost:7000/
-[main] INFO io.javalin.Javalin - Javalin started in 414ms \o/
-[main] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[main] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[qtp459848100-24] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[qtp459848100-24] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@2e4bc918 GET null  /accounts/  200 (233.8393 ms)
-[qtp459848100-14] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp459848100-14] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test04@mail.com
-[qtp459848100-14] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp459848100-14 @coroutine#7] INFO transfer.com.dao.AccountDaoImpl - Start - withdraw on account email = test01@mail.com for the amount = 500
-[qtp459848100-14 @coroutine#7] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp459848100-14 @coroutine#7] INFO transfer.com.dao.AccountDaoImpl - End - withdraw successful on account email = test01@mail.com
-[qtp459848100-14 @coroutine#7] INFO transfer.com.dao.AccountDaoImpl - Start - deposit on account email = test04@mail.com for the amount = 500
-[qtp459848100-14 @coroutine#7] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test04@mail.com
-[qtp459848100-14 @coroutine#7] INFO transfer.com.dao.AccountDaoImpl - End - deposit successful on account email = test04@mail.com
-[qtp459848100-14] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@79d24a32 POST application/x-www-form-urlencoded; charset=ISO-8859-1  /accounts/test01%40mail.com/500/test04%40mail.com  200 (6.2731 ms)
-[qtp459848100-15] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp459848100-15] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@1c38448 GET null  /accounts/test01%40mail.com  200 (0.4549 ms)
-[main] INFO io.javalin.Javalin - Stopping Javalin ...
-[main] INFO io.javalin.Javalin - Javalin has stopped
-</system-err>
-  </testcase>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="pingTest" time="0.019"/>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="depositTest" time="0.064">
-    <failure message="1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;5000&gt;
-  Actual: 5000
-" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;5000&gt;
-  Actual: 5000
-
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
-	at com.jayway.restassured.specification.ResponseSpecification$content$1.callCurrent(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
-	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:264)
-	at transfer.com.handler.AccountHandlerImplTest.depositTest(AccountHandlerImplTest.kt:61)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-    <system-out>Get all accounts
-Find an account using email
-Find an account using email
-</system-out>
-    <system-err>[main] INFO io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-[main] INFO io.javalin.Javalin - Starting Javalin ...
-[main] INFO io.javalin.Javalin - Listening on http://localhost:7000/
-[main] INFO io.javalin.Javalin - Javalin started in 6ms \o/
-[main] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[qtp611502040-50] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[qtp611502040-50] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@c16ce43 GET null  /accounts/  200 (0.6137 ms)
-[qtp611502040-42] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp611502040-42] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@318a088c GET null  /accounts/test01%40mail.com  200 (0.3607 ms)
-[qtp611502040-41] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp611502040-41 @coroutine#8] INFO transfer.com.dao.AccountDaoImpl - Start - deposit on account email = test01@mail.com for the amount = 1000
-[qtp611502040-41 @coroutine#8] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp611502040-41 @coroutine#8] INFO transfer.com.dao.AccountDaoImpl - End - deposit successful on account email = test01@mail.com
-[qtp611502040-41] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@1d64d438 POST application/x-www-form-urlencoded; charset=ISO-8859-1  /accounts/test01%40mail.com/1000  200 (1.2786 ms)
-[qtp611502040-43] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp611502040-43] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@1fad9c5 GET null  /accounts/test01%40mail.com  200 (0.3673 ms)
-[main] INFO io.javalin.Javalin - Stopping Javalin ...
-[main] INFO io.javalin.Javalin - Javalin has stopped
-</system-err>
-  </testcase>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="consulTest" time="0.041">
-    <failure message="1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;4000&gt;
-  Actual: 4000
-" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;4000&gt;
-  Actual: 4000
-
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
-	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
-	at com.jayway.restassured.specification.ResponseSpecification$content$1.callCurrent(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
-	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:264)
-	at transfer.com.handler.AccountHandlerImplTest.consulTest(AccountHandlerImplTest.kt:50)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-    <system-out>Get all accounts
-Find an account using email
-</system-out>
-    <system-err>[main] INFO io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-[main] INFO io.javalin.Javalin - Starting Javalin ...
-[main] INFO io.javalin.Javalin - Listening on http://localhost:7000/
-[main] INFO io.javalin.Javalin - Javalin started in 9ms \o/
-[main] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[qtp939475028-63] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[qtp939475028-63] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@65197fa4 GET null  /accounts/  200 (0.453 ms)
-[qtp939475028-54] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test01@mail.com
-[qtp939475028-54] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@5f90eb82 GET null  /accounts/test01%40mail.com  200 (1.0165 ms)
-[main] INFO io.javalin.Javalin - Stopping Javalin ...
-[main] INFO io.javalin.Javalin - Javalin has stopped
-</system-err>
-  </testcase>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="getAllTest" time="0.015"/>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="createTest" time="0.058">
-    <failure message="1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;20000&gt;
-  Actual: 20000
-" type="java.lang.AssertionError">java.lang.AssertionError: 1 expectation failed.
-JSON path balance doesn&apos;t match.
-Expected: &lt;20000&gt;
-  Actual: 20000
-
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.codehaus.groovy.reflection.CachedConstructor.invoke(CachedConstructor.java:80)
-	at org.codehaus.groovy.reflection.CachedConstructor.doConstructorInvoke(CachedConstructor.java:74)
-	at org.codehaus.groovy.runtime.callsite.ConstructorSite$ConstructorSiteNoUnwrap.callConstructor(ConstructorSite.java:84)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callConstructor(AbstractCallSite.java:247)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure.validate(ResponseSpecificationImpl.groovy:598)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl$HamcrestAssertionClosure$validate$1.call(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.validateResponseIfRequired(ResponseSpecificationImpl.groovy:760)
-	at sun.reflect.GeneratedMethodAccessor63.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite$PogoCachedMethodSiteNoUnwrapNoCoerce.invoke(PogoMetaMethodSite.java:210)
-	at org.codehaus.groovy.runtime.callsite.PogoMetaMethodSite.callCurrent(PogoMetaMethodSite.java:59)
-	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.callCurrent(AbstractCallSite.java:166)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.content(ResponseSpecificationImpl.groovy:251)
-	at com.jayway.restassured.specification.ResponseSpecification$content$1.callCurrent(Unknown Source)
-	at com.jayway.restassured.internal.ResponseSpecificationImpl.body(ResponseSpecificationImpl.groovy:234)
-	at com.jayway.restassured.internal.ValidatableResponseOptionsImpl.body(ValidatableResponseOptionsImpl.java:264)
-	at transfer.com.handler.AccountHandlerImplTest.createTest(AccountHandlerImplTest.kt:69)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
-	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
-	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
-	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
-	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
-</failure>
-    <system-out>Get all accounts
-Find an account using email
-</system-out>
-    <system-err>[main] INFO io.javalin.Javalin - 
-           __                      __ _
-          / /____ _ _   __ ____ _ / /(_)____
-     __  / // __ `/| | / // __ `// // // __ \
-    / /_/ // /_/ / | |/ // /_/ // // // / / /
-    \____/ \__,_/  |___/ \__,_//_//_//_/ /_/
-
-        https://javalin.io/documentation
-
-[main] INFO io.javalin.Javalin - Starting Javalin ...
-[main] INFO io.javalin.Javalin - Listening on http://localhost:7000/
-[main] INFO io.javalin.Javalin - Javalin started in 9ms \o/
-[qtp1897221921-89] INFO transfer.com.dao.AccountDaoImpl - List of all Accounts
-[qtp1897221921-89] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@76dd2ba2 GET null  /accounts/  200 (0.4391 ms)
-[qtp1897221921-80] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test10@mail.com
-[qtp1897221921-80 @coroutine#9] INFO transfer.com.dao.AccountDaoImpl - Start - create an account email = test10@mail.com for the amount = 20000
-[qtp1897221921-80 @coroutine#9] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test10@mail.com
-[qtp1897221921-80 @coroutine#9] INFO transfer.com.dao.AccountDaoImpl - End - create successful an account email = test10@mail.com
-[qtp1897221921-80] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@21937006 PUT null  /accounts/test10%40mail.com/20000  200 (1.8919 ms)
-[qtp1897221921-81] INFO transfer.com.dao.AccountDaoImpl - findByEmail call : email = test10@mail.com
-[qtp1897221921-81] INFO transfer.com.router.Router$Companion - io.javalin.http.Context@71e225f5 GET null  /accounts/test10%40mail.com  200 (0.316 ms)
-[main] INFO io.javalin.Javalin - Stopping Javalin ...
-[main] INFO io.javalin.Javalin - Javalin has stopped
-</system-err>
-  </testcase>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="transferTest" time="1.985"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="pingTest" time="0.015"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="depositTest" time="0.058"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="consulTest" time="0.033"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="getAllTest" time="0.012"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="createTest" time="0.049"/>
 </testsuite>

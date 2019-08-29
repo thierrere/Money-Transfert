@@ -47,7 +47,7 @@ class AccountHandlerImplTest {
     fun consulTest (){
         val account = accountService.getAccountDao().getAccounts()["test01@mail.com"]
         given().port(p).`when`().get("accounts/").then().statusCode(200)
-        given().port(p).`when`().get("accounts/${account!!.getEmail()}").then().statusCode(200).body("email", equalTo(account.getEmail())).body("balance", equalTo(account.getBalance()))
+        given().port(p).`when`().get("accounts/${account!!.getEmail()}").then().statusCode(200).body("email", equalTo(account.getEmail())).body("balance", equalTo(account.getBalance().toInt()))
     }
 
     @Test
@@ -58,7 +58,7 @@ class AccountHandlerImplTest {
         given().port(p).`when`().get("accounts/").then().statusCode(200)
         given().port(p).`when`().get("accounts/${account.getEmail()}").then().statusCode(200)
         given().port(p).`when`().post("accounts/${account.getEmail()}/$amountToAdd").then().statusCode(200).body("status", equalTo(true))
-        given().port(p).`when`().get("accounts/${account.getEmail()}").then().statusCode(200).body("email", equalTo(account.getEmail())).body("balance", equalTo((amountBeforeDeposit.plus(amountToAdd))))
+        given().port(p).`when`().get("accounts/${account.getEmail()}").then().statusCode(200).body("email", equalTo(account.getEmail())).body("balance", equalTo((amountBeforeDeposit.plus(amountToAdd).toInt())))
     }
 
     @Test
@@ -66,7 +66,7 @@ class AccountHandlerImplTest {
         val newAccount = Account("test10@mail.com", BigDecimal(20000))
         given().port(p).`when`().get("accounts/").then().statusCode(200)
         given().port(p).`when`().put("accounts/${newAccount.getEmail()}/${newAccount.getBalance()}").then().statusCode(200).body("status", equalTo(true))
-        given().port(p).`when`().get("accounts/${newAccount.getEmail()}").then().statusCode(200).body("email", equalTo(newAccount.getEmail())).body("balance", equalTo(newAccount.getBalance()))
+        given().port(p).`when`().get("accounts/${newAccount.getEmail()}").then().statusCode(200).body("email", equalTo(newAccount.getEmail())).body("balance", equalTo(newAccount.getBalance().toInt()))
     }
 
     @Test
@@ -78,8 +78,8 @@ class AccountHandlerImplTest {
         val amountToTransfer = BigDecimal(500)
         given().port(p).`when`().get("accounts/").then().statusCode(200)
         given().port(p).`when`().post("accounts/${accountSending.getEmail()}/$amountToTransfer/${accountReceiving.getEmail()}").then().statusCode(200).body("status", equalTo(true))
-        given().port(p).`when`().get("accounts/${accountSending.getEmail()}").then().statusCode(200).body("email", equalTo(accountSending.getEmail())).body("balance", equalTo((amountBeforeSending.minus(amountToTransfer))))
-        given().port(p).`when`().get("accounts/${accountReceiving.getEmail()}").then().statusCode(200).body("email", equalTo(accountReceiving.getEmail())).body("balance", equalTo((amountBeforeReceiving.plus(amountToTransfer))))
+        given().port(p).`when`().get("accounts/${accountSending.getEmail()}").then().statusCode(200).body("email", equalTo(accountSending.getEmail())).body("balance", equalTo((amountBeforeSending.minus(amountToTransfer).toInt())))
+        given().port(p).`when`().get("accounts/${accountReceiving.getEmail()}").then().statusCode(200).body("email", equalTo(accountReceiving.getEmail())).body("balance", equalTo((amountBeforeReceiving.plus(amountToTransfer).toInt())))
     }
 
     @AfterTest
