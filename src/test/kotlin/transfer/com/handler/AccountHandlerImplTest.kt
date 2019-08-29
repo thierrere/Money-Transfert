@@ -13,7 +13,6 @@ import transfer.com.router.Router
 
 class AccountHandlerImplTest {
     private val router : Router = Router()
-    //private val accountHandler : AccountHandler = AccountHandlerImpl
     private val accountService : AccountService = AccountServiceImpl ()
     private val p = 7000
     init {

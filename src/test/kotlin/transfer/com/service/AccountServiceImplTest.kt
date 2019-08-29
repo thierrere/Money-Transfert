@@ -13,7 +13,6 @@ import transfer.com.utils.ServiceResponse
 class AccountServiceImplTest {
 
     private val accountService: AccountService = AccountServiceImpl()
-    //val p = System.getenv("PORT")?.toIntOrNull() ?: 7000
     @BeforeTest
     fun prepareTest() {
         val accounts = hashMapOf(
@@ -96,7 +95,6 @@ class AccountServiceImplTest {
     fun createAccountTestWithNegativeAmount() {
         val accountToCreate = Account ("test20@mail.com", -2000.0)
         val result = ServiceResponse(false , accountService.mSG_CREATE_ACCOUNT_NEGATIVE_AMOUNT)
-        //assertThat(accountService.getAccount(accountToCreate.getEmail())).isNull()
         assertThat(result).isEqualTo(accountService.createAccount(accountToCreate.getEmail(), accountToCreate.getBalance()))
     }
 
@@ -118,7 +116,6 @@ class AccountServiceImplTest {
     fun createAccountTest() {
         val accountToCreate = Account ("test20@mail.com", 20000.0)
         val result = ServiceResponse(true , "Create Account Successful : $accountToCreate")
-        //assertThat(accountService.getAccount(accountToCreate.getEmail())).isNull()
         assertThat(result).isEqualTo(accountService.createAccount(accountToCreate.getEmail(), accountToCreate.getBalance()))
         assertThat(accountToCreate).isEqualTo(accountService.getAccountDao().getAccounts()[accountToCreate.getEmail()])
     }
@@ -167,9 +164,7 @@ class AccountServiceImplTest {
     @Test
     fun moneyTransactionWithInsufficientBalance() {
         val accountSending = accountService.getAccountDao().getAccounts()["test02@mail.com"]
-        //val accountSending = AccountDaoImpl.getAccounts()["test02@mail.com"]
         val accountReceiving = accountService.getAccountDao().getAccounts()["test04@mail.com"]
-        //val accountReceiving = AccountDaoImpl.getAccounts()["test04@mail.com"]
         val amountToTransfer = accountSending!!.getBalance() + 1000.0
         val result = ServiceResponse(false , accountService.mSG_TRANSACTION_INSUFICIENT_FUND)
         assertThat(
@@ -187,9 +182,7 @@ class AccountServiceImplTest {
     @Test
     fun moneyTransactionWithNegativeAmount() {
         val accountSending = accountService.getAccountDao().getAccounts()["test02@mail.com"]
-        //val accountSending = AccountDaoImpl.getAccounts()["test02@mail.com"]
         val accountReceiving = accountService.getAccountDao().getAccounts()["test04@mail.com"]
-        //val accountReceiving = AccountDaoImpl.getAccounts()["test04@mail.com"]
         val result = ServiceResponse(false , accountService.mSG_TRANSACTION_NEGATIVE_AMOUNT)
         assertThat(
             result
@@ -221,7 +214,6 @@ class AccountServiceImplTest {
             accountReceiving.getEmail(),
             transferAmount = amountToTransfer
         ))
-        //Verifying the balance of each account
         //Verifying the balance of each account in the provided database (HashMap)
         assertThat(
             Account(
@@ -236,9 +228,4 @@ class AccountServiceImplTest {
             )
         ).isEqualTo(accountService.getAccountDao().getAccounts()["test04@mail.com"])
     }
-
-    /*@AfterTest
-    fun endTest() {
-        router.getApp()!!.stop()
-    }*/
 }

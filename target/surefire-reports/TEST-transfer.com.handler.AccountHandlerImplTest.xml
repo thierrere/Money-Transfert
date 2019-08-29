@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="transfer.com.handler.AccountHandlerImplTest" time="1.89" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="transfer.com.handler.AccountHandlerImplTest" time="2.156" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_201\jre\bin"/>
@@ -63,10 +63,10 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="transferTest" time="1.757"/>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="pingTest" time="0.018"/>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="depositTest" time="0.043"/>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="consulTest" time="0.034"/>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="getAllTest" time="0.011"/>
-  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="createTest" time="0.027"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="transferTest" time="2.016"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="pingTest" time="0.017"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="depositTest" time="0.044"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="consulTest" time="0.039"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="getAllTest" time="0.012"/>
+  <testcase classname="transfer.com.handler.AccountHandlerImplTest" name="createTest" time="0.028"/>
 </testsuite>

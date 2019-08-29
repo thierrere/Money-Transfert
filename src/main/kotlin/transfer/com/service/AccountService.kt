@@ -18,7 +18,7 @@ interface AccountService {
     val mSG_TRANSACTION_INSUFICIENT_FUND: String
         get() = "Transfer failed insufficient balance on Sender Account"
     val mSG_TRANSACTION_NEGATIVE_AMOUNT: String
-        get() = "Transfer failed - please use a positive amount bigger than zero"
+        get() = "Transfer failed - please use a positive amount "
     val mSG_TRANSACTION_ERROR : String
         get() = "Transfer failed - Unexpected Error"
     val MSG_DEPOSIT_ERROR : String
